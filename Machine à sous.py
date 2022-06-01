@@ -109,7 +109,7 @@ while True :
     # on compare ensuite les valeurs tirées de chaque rouleau 
     # et en cas de victoire on choisis le gain en fonction du coefficient des éléments 
     if tirageDeuxRouleau == tiragePremRouleau == tirageTroisRouleau == 0 :
-        print("BRAVO ! VOUS AVEZ TOUCHE LE GROS LOT !!!!! Les trois symboles sont égal à 0 ! Vous avez gagné 100 fois votre mise ! Vous remportez donc :", jetonsMises * 100, "jetons !")
+        print("Les trois symboles sont égal à 0 ! Vous avez gagné 100 fois votre mise ! Vous remportez donc :", jetonsMises * 100, "jetons !")
         credit += jetonsMises * 100
         ecartBanque -= jetonsMises * 99
         time.sleep(2)
@@ -185,14 +185,14 @@ while True :
         time.sleep(2)
         
     else:
-        print("Oh noooon ! Quel dommage vous avez perdu c'est si triste mais vous ferez mieux la prochaîne fois ... Retentez votre chance !")
+        print("Vous  avez perdu. Retentez votre chance !")
         print()
         time.sleep(2)
         ecartBanque += jetonsMises
         
     # si le joueur n'a plus de jetons la machine (boucle infinie) s'arrête
     if credit == 0 :
-        print("Vous n'avez plus de jetons, vous ne pouvez plus continuer à jouer, ce fut un plaisir de faire affaire avec vous !")
+        print("Vous n'avez plus de jetons, vous ne pouvez plus continuer à jouer")
         break
         
     print("Vous avez ", credit, " jetons restants.")
